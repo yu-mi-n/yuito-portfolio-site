@@ -10,18 +10,16 @@ function renderPortfolio(projects) {
         const slider = document.createElement('div');
         slider.className = 'slider-container';
 
-        // スライドさせるためのトラック要素を作成
         const track = document.createElement('div');
         track.className = 'slider-track';
 
         const filteredWorks = projects.filter(p => p.category === category);
         const cardsHtml = filteredWorks.map(work => {
-            // ステータスに応じた出し分け
             const statusClass = work.isDeployed ? 'status-deployed' : 'status-pending';
             const statusText = work.isDeployed ? 'Deployed' : 'Local Only / Building';
             const cardClass = work.isDeployed ? '' : 'not-deployed';
             
-            // 画像部分のリンク設定
+            // 画像部分のリンク
             let imageHtml;
             if (work.image) {
                 imageHtml = work.isDeployed 
@@ -34,12 +32,11 @@ function renderPortfolio(projects) {
                              </div>`;
             }
 
-            // ボタンの有効・無効
             const projectBtn = work.isDeployed 
                 ? `<a href="${work.link}" target="_blank" class="project-link">View Project</a>`
                 : `<span class="project-link disabled">Not Deployed</span>`;
 
-            // GitHubボタンの有効・無効
+            // GitHubボタン
             const githubBtn = work.github
                 ? `<a href="${work.github}" target="_blank" class="github-link" title="GitHub"><i class="fab fa-github"></i></a>`
                 : `<span class="github-link disabled"><i class="fab fa-github"></i></span>`;
@@ -60,7 +57,7 @@ function renderPortfolio(projects) {
             `;
         }).join('');
 
-        // Coming Soonカードの作成
+        // Coming Soonカード
         const comingSoonHtml = `
             <div class="work-card">
                 <div class="coming-soon-img">
@@ -74,19 +71,15 @@ function renderPortfolio(projects) {
             </div>
         `;
 
-        // 区切り線の作成
         const dividerHtml = `
             <div class="set-divider">
                 <div class="divider-line"></div>
             </div>
         `;
 
-        // 1セット分のHTMLを作成（作品リスト + Coming Soon + 区切り線）
+        // 1セット分のHTML（作品リスト + Coming Soon + 区切り線）
         const fullSetHtml = cardsHtml + comingSoonHtml + dividerHtml;
-
-        // カードの枚数（作品数 + Coming Soon）
         const totalCards = filteredWorks.length + 1;
-        // ループに必要な幅を確保するため、カード枚数が少ない場合は繰り返し回数を増やす
         const repeatCount = totalCards <= 4 ? 4 : 2;
 
         track.innerHTML = fullSetHtml.repeat(repeatCount);
@@ -95,15 +88,12 @@ function renderPortfolio(projects) {
         section.appendChild(slider);
         container.appendChild(section);
 
-        // --- 自動スクロールと手動操作の制御 ---
         let isInteracting = false;
-        const scrollSpeed = 0.5; // スクロール速度（調整可能）
+        const scrollSpeed = 0.5;
 
         const autoScroll = () => {
-            // ユーザーが操作していない時だけ自動スクロール
             if (!isInteracting) {
                 slider.scrollLeft += scrollSpeed;
-                // 無限ループ処理: 1セット分を超えたら先頭に戻す
                 if (slider.scrollLeft >= track.scrollWidth / repeatCount) {
                     slider.scrollLeft = 0;
                 }
@@ -112,7 +102,6 @@ function renderPortfolio(projects) {
         };
         requestAnimationFrame(autoScroll);
 
-        // ユーザー操作時は自動スクロールを停止
         const stop = () => isInteracting = true;
         const start = () => isInteracting = false;
 
@@ -131,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error loading projects:', error));
 });
 
-// Contactボタンの一時的な未実装アラート（後で削除予定）
+// ーーーーーーーーーーーーーーContactボタンの未実装アラートーーーーーーーーーー「「「「「「「実装後、削除」」」」」」」」」」」
 document.addEventListener('DOMContentLoaded', () => {
     const contactBtn = document.querySelector('.btn-contact');
     if (contactBtn) {
@@ -140,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contactBtn.classList.add('show-tooltip');
             setTimeout(() => {
                 contactBtn.classList.remove('show-tooltip');
-            }, 2000); // 2秒後に消える
+            }, 2000);
         });
     }
 });

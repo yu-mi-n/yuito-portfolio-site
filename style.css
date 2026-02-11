@@ -2,7 +2,7 @@
     --bg-color: #ffffff;
     --text-color: #2c3e50;
     --sub-text-color: #7f8c8d;
-    --accent-color: #007aff; /* より鮮やかなブルー */
+    --accent-color: #007aff;
     --deployed-color: #2ecc71;
     --not-deployed-color: #95a5a6;
     --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
@@ -20,7 +20,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 背景アニメーション */
+/* 背景 */
 .bg-animation {
     position: fixed;
     top: 0;
@@ -62,7 +62,7 @@ body {
     100% { transform: translate(30px, 50px) scale(1.1); }
 }
 
-/* ヘッダー */
+/* ナブバー */
 .site-header {
     position: fixed;
     top: 0;
@@ -108,14 +108,14 @@ body {
     color: var(--accent-color);
 }
 
-/* Contactボタン（目立たせるスタイル） */
+/* Contactボタン */
 .btn-contact {
     background-color: var(--accent-color);
     color: #ffffff !important;
     padding: 10px 24px;
     border-radius: 30px;
     transition: transform 0.3s, box-shadow 0.3s !important;
-    position: relative; /* 吹き出しの位置基準 */
+    position: relative;
 }
 
 .btn-contact:hover {
@@ -123,7 +123,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
 }
 
-/* 吹き出し本体 */
+/* 吹き出し */
 .btn-contact::after {
     content: "未実装です";
     position: absolute;
@@ -142,7 +142,6 @@ body {
     pointer-events: none;
 }
 
-/* 吹き出しの三角矢印 */
 .btn-contact::before {
     content: '';
     position: absolute;
@@ -158,7 +157,6 @@ body {
     pointer-events: none;
 }
 
-/* クラスが付与された時に表示 */
 .btn-contact.show-tooltip::after,
 .btn-contact.show-tooltip::before {
     opacity: 1;
@@ -187,7 +185,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* スクロールダウンアニメーション */
+/* スクロールダウン */
 .scroll-down {
     position: absolute;
     bottom: 40px;
@@ -240,11 +238,10 @@ body {
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
-    border-left: none; /* 以前の線を削除 */
+    border-left: none;
     padding-left: 0;
 }
 
-/* タイトルの下線アニメーション */
 .category-title::after {
     content: '';
     position: absolute;
@@ -261,13 +258,13 @@ body {
     width: 100%;
     position: relative;
     padding: 10px 0 20px 0;
-    cursor: grab; /* 掴めることを示すカーソル */
-    scrollbar-width: none; /* Firefox用: スクロールバー非表示 */
-    -ms-overflow-style: none; /* IE/Edge用 */
+    cursor: grab; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
 }
 
 .slider-container::-webkit-scrollbar {
-    display: none; /* Chrome/Safari用: スクロールバー非表示 */
+    display: none;
 }
 
 .slider-track {
@@ -275,11 +272,11 @@ body {
     width: max-content;
 }
 
-/* 作品カード */
+/* 作品 */
 .work-card {
     width: 320px;
     background: #ffffff;
-    border-radius: 20px; /* 角丸を大きく */
+    border-radius: 20px;
     box-shadow: var(--card-shadow);
     border: 1px solid rgba(0,0,0,0.03);
     overflow: hidden;
@@ -289,7 +286,7 @@ body {
     margin-right: 25px;
 }
 
-/* デプロイ済み作品の画像リンク */
+/* デプロイ済み作品の画像 */
 .image-link {
     display: block;
     overflow: hidden;
@@ -307,7 +304,7 @@ body {
     transform: scale(1.08);
 }
 
-/* No Image プレースホルダー */
+/* No Image */
 .no-image-placeholder {
     width: 100%;
     height: 180px;
@@ -322,7 +319,7 @@ body {
 .no-image-placeholder i { font-size: 2.5rem; margin-bottom: 8px; opacity: 0.5; }
 .no-image-placeholder span { font-family: var(--font-en); font-weight: 600; font-size: 0.9rem; opacity: 0.7; }
 
-/* Coming Soon用の画像プレースホルダー */
+/* Coming Soon用の画像 */
 .coming-soon-img {
     width: 100%;
     height: 180px;
@@ -334,7 +331,7 @@ body {
     font-size: 3rem;
 }
 
-/* 未デプロイのスタイル */
+/* 未デプロイ スタイル */
 .not-deployed .work-image {
     filter: grayscale(100%);
     opacity: 0.7;
@@ -357,9 +354,9 @@ body {
 
 .work-info {
     padding: 25px;
-    flex-grow: 1;       /* カードの高さに合わせてエリアを伸ばす */
-    display: flex;      /* 中身をフレックスボックス化 */
-    flex-direction: column; /* 縦並びにする */
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
 }
 .work-info h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
 .work-info p { color: var(--sub-text-color); font-size: 0.9rem; line-height: 1.6; }
@@ -387,7 +384,7 @@ body {
     pointer-events: none;
 }
 
-/* セットの区切り線 */
+/* 区切り線 */
 .set-divider {
     display: flex;
     align-items: center;
@@ -398,7 +395,7 @@ body {
 
 .divider-line {
     width: 4px;
-    height: 50%; /* カードの高さの半分くらい */
-    background-color: rgba(0, 0, 0, 0.1); /* 薄いグレー */
+    height: 50%; 
+    background-color: rgba(0, 0, 0, 0.1); 
     border-radius: 2px;
 }
