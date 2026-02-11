@@ -1,0 +1,65 @@
+[
+    {
+        "title": "SelFit",
+        "category": "Django",
+        "description": "顔写真とデータの推移を基に健康維持をサポートするWebアプリケーションです。",
+        "image": "image/selfit_logo.png",
+        "link": "https://selfit.onrender.com",
+        "github": "https://github.com/yu-mi-n/SelFit_app",
+        "isDeployed": true
+    },
+    {
+        "title": "本棚アプリ",
+        "category": "Django",
+        "description": "一番最初にdjangoで作成したWebアプリケーションで、「Djangoのツボとコツがゼッタイわかる本」の教材通りに作成した本棚アプリです。デプロイ設定のエラーで現在、未公開となっています。",
+        "image": "image/tsubokotsu.png",
+        "link": "https://bookpro.onrender.com",
+        "github": "https://github.com/yu-mi-n/bookproject",
+        "isDeployed": false
+    },
+    {
+        "title": "eveZAP",
+        "category": "Django",
+        "description": "学内イベントでチーム開発を行った際に作成した「質問によるパーソナライズ化で健康へ導くタスクを提示して、健康に導くWebアプリケーション」です。",
+        "image": "",
+        "link": "",
+        "github": "https://github.com/Tech-Jam-KDG-2026-Winter/Team-7-Django",
+        "isDeployed": false
+    },
+    {
+        "title": "Battle Monsters",
+        "category": "Flask",
+        "description": "コマンド入力でモンスターと戦闘を行うシンプルなゲームです。開発中です・・・",
+        "image": "",
+        "link": "", 
+        "github": "",
+        "isDeployed": false
+    },
+    {
+        "title": "midhike",
+        "category": "Flutter",
+        "description": "学内イベントでチーム開発を行った際に作成した「お散歩アプリ」です。Flutterについての知識がなく、学びながらの開発で、ほとんど上級生頼りになった作品です。",
+        "image": "",
+        "link": "", 
+        "github": "https://github.com/shimodairayuujirou/midhike",
+        "isDeployed": false
+    },
+    {
+        "title": "gotanda-brewary",
+        "category": "WebSite",
+        "description": "一番最初に作成したhtmlとcssのみで作成した架空のブルワリーWebサイトです。",
+        "image": "image/gotanda-brewary.png",
+        "link": "https://yu-mi-n.github.io/gotanda-brewary/", 
+        "github": "https://github.com/yu-mi-n/gotanda-brewary",
+        "isDeployed": true
+    },
+    {
+        "title": "Virtual Galaxy Academy",
+        "category": "WebSite",
+        "description": "授業で「未来の企業へ新サービスを提案する」という課題の一環で作成したhtmlとcss,jsを使用した架空のVantanの新スクールのWebサイトです。",
+        "image": "image/Virtual-Galaxy-Achademy.png",
+        "link": "https://yu-mi-n.github.io/virtual-galaxy-academy-project/", 
+        "github": "https://github.com/yu-mi-n/virtual-galaxy-academy-project",
+        "isDeployed": true
+    }
+]
