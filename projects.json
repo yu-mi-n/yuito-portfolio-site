@@ -1,5 +1,22 @@
 [
     {
+        "title": "shift-calendar",
+        "category": "My Recommendation",
+        "description": "アルバイト先のシフト表（ダミーデータ）から、GASを使用して名前で検索して、カレンダーに自動で反映させるWebアプリケーションです。",
+        "image": "image/shift-calendar.png",
+        "link": "https://docs.google.com/spreadsheets/d/12amUwWbymF4kNTu2nLiMx3gHS1g7ow-xXmfcaGqzmEU/edit?usp=sharing",
+        "github": "https://github.com/yu-mi-n/shift_calendar",
+        "isDeployed": true
+    },
+    {
+        "title": "calendar-maker",
+        "category": "My Recommendation",
+        "description": "アルバイト先でお客様用に掲載するカレンダーを簡単に作成するためのWebアプリケーションです。",
+        "image": "image/calendar-maker.png",
+        "link": "https://github.com/yu-mi-n/Anytime_Calendar_Maker/", 
+        "github": "https://github.com/yu-mi-n/Anytime_Calendar_Maker"
+    },
+    {
         "title": "SelFit",
         "category": "Django",
         "description": "顔写真とデータの推移を基に健康維持をサポートするWebアプリケーションです。",
@@ -25,6 +42,15 @@
         "link": "",
         "github": "https://github.com/Tech-Jam-KDG-2026-Winter/Team-7-Django",
         "isDeployed": false
+    },
+    {
+        "title": "タスアシ",
+        "category": "Django",
+        "description": "自分が資格勉強をしていて欲しいなと感じた機能を実装した、資格試験に特化したタスク管理アプリです。（開発中）",
+        "image": "image/tasassi.png",
+        "link": "https://tasuassi.onrender.com/",
+        "github": "https://github.com/yu-mi-n/tasassi",
+        "isDeployed": true
     },
     {
         "title": "Battle Monsters",
